@@ -1,0 +1,11 @@
+<h1> {{ listing.title }} </h1>
+
+{% if listing.image %}
+    <img src="{{listing.image.url}}"/>
+{% endif %}
+
+{% if listing.video != "" %} 
+<div>
+{{ listing.video|safe }}
+</div>
+{% endif %}

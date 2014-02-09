@@ -1,0 +1,157 @@
+/*CSS for PolyProjects*/
+
+*{
+padding:auto;
+margin:auto;
+}
+
+/*structural elements*/
+
+body {
+	font-family: 'Balthazar', serif;
+	background-color: #FFE;
+}
+
+p {
+	font-family: 'Balthazar', serif;
+	margin-left: 50px;
+	margin-right: 300px;
+	color: #faa62a;
+	line-height: 25px;
+	display: block;
+}
+
+p.category {
+	margin-left: 5em;
+}
+
+p.floatleft {
+	float: left;
+	margin-right:30px;
+}
+
+.search {
+	background-color: #F8D3A0;
+	float: left;
+	margin-left: 3em;
+	margin-top: 2em;
+}
+
+.featuredProject{
+   height: 250px;
+}
+	
+#details {
+	background-color: #F8D3A0;
+	margin-left: 35em;
+	margin-right: 10em;
+	margin-top: -3em;
+	text-align: center;
+	display: block;
+	padding: .5em;
+}
+
+#footer {
+	clear: all;
+}
+
+#projects {
+	background-color: #F8D3A0;
+	margin: 30em;
+}
+
+#footer {
+	font-family: 'Balthazar', serif;
+	background-color: #F8D3A0;
+	padding: 3em;
+	margin-top: 3em;
+}
+
+h1 {
+	font-size: 30px;
+	font-family: 'Balthazar', serif;
+	margin-left: 50px;
+	color: #faa62a;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}	
+
+#logo {
+    float: left;
+	padding-left: 20px;
+	display: inline;
+}
+
+
+/*nav elements*/
+
+#nav ul li {
+	display: inline;
+	float: right;
+	position:relative;
+	text-align: right;
+	color: #FAA62A;
+	background-color: #F8D3A0;
+	padding: .7em;
+	margin: 2.5em;   
+}
+
+#nav ul {
+	padding: .1em;
+	font-size: medium;
+	margin-top: 30px;	
+}
+
+#nav ul li a {
+	text-decoration: none;
+	padding: 0em 1.6em;
+	color: #FAA62A;
+}
+
+#nav ul li a:hover {
+	color: #FFFFFF;
+}
+
+
+/* link elements */
+
+a { 
+	text-decoration: none;
+	color: #FAA62A;
+}
+
+a:hover {
+		color: #FFFFFF;
+}
+
+
+.floatright {
+	float: right;
+	margin-right:30px;
+}
+
+.floatleft {
+	float: left;
+	margin-right:30px;
+}
+
+
+.slider {
+   width: 90%;
+   margin: 150px auto 0;
+}
+
+.sliderImg
+{
+   height: 250px;
+   overflow: hidden;
+   width: 100%;
+}
+.sliderImg img
+{
+   display:block;
+}
+
+ul.slides li img {
+    width: 100%;
+}

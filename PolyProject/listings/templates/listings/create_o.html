@@ -1,0 +1,33 @@
+<{%if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+h1>Create Listing</h1>
+
+<form action="{% url 'createlisting' %}" method="post" enctype="multipart/form-data">
+{%csrf_token%}
+
+First Name
+<input type="text" id="firstname" name="firstname"/>
+
+Last Name
+<input type="text" name="lastname"/>
+
+Title
+<input type="text" name="title"/>
+
+Description 
+<input type="text" name="description"/>
+
+Skills Needed
+<input type="text" name="skills"/>
+
+Email
+<input type="email" name="email"/>
+
+Image
+<input type="file" name="image"/>
+
+Video
+<input type="url" name="video"/>
+
+<input type="submit" value="create listing" name="submit"/>
+</form>

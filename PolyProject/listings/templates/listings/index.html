@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    {%load staticfiles %} 
+   <title>PolyProjects</title>
+   <link rel="shortcut icon" href="/favicon.ico" />
+   <link href='http://fonts.googleapis.com/css?family=Balthazar' rel='stylesheet' type='text/css'>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+   <script defer src="{% static "index/js/jquery.flexslider.js" %}"></script>
+   <link href="{%static "index/stylesheets/flexslider.css"%}" rel="stylesheet" />
+   <script src="{%static "index/js/homepage.js" %}"></script>
+   <link href="{%static "index/stylesheets/style.css" %}" rel="stylesheet" type="text/css" />
+   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+</head> 
+
+
+<body>
+   <section id="logo">
+      <a href="index.html"><img src="{% static "index/images/logo.png" %}" width="300px" height="108px" alt="logo"/></a>
+   </section>
+
+   <section id="nav">
+      <ul>
+         <li><a href="/listings/create/">Create Project</a></li>
+      </ul>
+   </section>
+
+   <section class="slider">
+      <div class="flexslider">
+         <ul class="slides">
+            {% for listing in listing_list %}
+                {%if listing.image %}
+                <li>
+              
+                <div class="sliderImg"><img src={{listing.image.url}} /></div>
+            
+               <h1>{{listing.title}}</h1>
+               <p class: "floatleft">{{listing.description}}</p>
+               <div id= "details" class="floatright">
+                  <a href="/listings/{{listing.id}}">Details</a>
+               </div>
+            </li>
+            {%endif%}
+            {%endfor%}     
+         </ul>
+      </div>
+   </section>
+
+
+   <section id="projects">
+      <div id="search" class="search">
+         <p>Search Projects</p>
+         <p>Project Categories</p>
+         <p class="category">Art/Design</p>
+         <p class="category">Education</p>
+      </div>
+   </section>  
+
+   <section id="footer">
+      <p><a href="about.html">About</a></p>
+      <p><a href="resources.html">Resources</a></p>
+      <p><a href="faq.html">FAQ</a></p>
+   </section>
+</body>
+</html>

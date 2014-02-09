@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Poly Projects | Submit </title>
+
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="{% static "create/stylesheets/main.css" %}"/>
+   <script src="{% static "create/js/jquery-1.11.0.min.js" %}"></script>
+   <script src="{% static "create/js/addProject.js"%}"></script>
+</head>
+
+<body>
+	<div id="Intro">
+		<h1>Submit a Project</h1>
+      <p>Wahoo! You're submitting a project! Please provide a brief description of what you're doing and what you're trying to accomplish. While you're at it, list what you're looking for in project collaborators. List general skills as well as specific skills you're looking for (ex: Welding, Javascript, Graphic Design, Marketing, etc.). This is one way potential collaborators might find you so don't be afriad to be thorough!</p>
+	</div>
+
+	<br />
+
+	<form action="{% url 'createlisting' %}" id="survey" enctype="multipart/form-data" method="post">
+    {%csrf_token%}
+      <div class="shortQuestions">
+         <p>First Name</p>
+         <input class="Response" type="text" name="firstname" id="firstname" required>
+
+         <p>Last Name</p>
+         <input class="Response" type="text" name="lastname" id = "lastname" required>
+
+         <p>Email</p>
+         <input class="Response" type="email" name="email" id="email" required>
+
+         <p>Project Title</p>
+         <input class="Response" type="text" name="title" id="title" required>
+
+         <p>Link to video.</p>
+         <input class="Response" type="url" name="video" id="video" required>
+      </div>
+
+      <div class="longQuestions">
+         <!--<input class="Response" id="description" type="text" name="description" placeholder="Project Description" required>-->
+         <p><span>Project Description</span> <span id="addImage">+Add an Image</span></p>
+         <textarea class="Response" id="description" name="description" required="required"></textarea>
+
+         <p>Skills I'm looking for</p>
+         <textarea class="Response" id="skillsNeeded" name="skills" required="required"></textarea>
+      </div>
+ 
+        <p>Upload a logo or splash image</p>
+        <input type="file" name="image" class="Response" required>
+		<div class="submitButton">
+			<input type="submit" name="submit" value="Submit &rarr;" />
+		</div>
+	</form>
+
+</body>
+</html>

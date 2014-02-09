@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Poly Projects | Edit </title>
+
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="{% static "create/stylesheets/main.css" %}"/>
+   <script src="{% static "create/js/jquery-1.11.0.min.js" %}"></script>
+   <script src="{% static "create/js/addProject.js"%}"></script>
+</head>
+
+<body>
+	<div id="Intro">
+		<h1>Edit a Project</h1>
+        <p>Edit your project or delete it!</p> 
+	</div>
+
+	<br />
+
+	<form action="{% url 'editPost' listing.id %}" id="survey" enctype="multipart/form-data" method="post">
+    {%csrf_token%}
+      <div class="shortQuestions">
+         <p>First Name</p>
+         <input class="Response" type="text" name="firstname" id="firstname" value={{listing.firstname}} required>
+
+         <p>Last Name</p>
+         <input class="Response" type="text" name="lastname" id = "lastname" value={{listing.lastname}} required>
+
+         <p>Email</p>
+         <input class="Response" type="email" name="email" id="email" value={{listing.email}} required>
+
+         <p>Project Title</p>
+         <textarea class="Response" type="text" name="title" id="title" required>{{listing.title}}</textarea>
+
+         <p>Link to video.</p>
+         <input class="Response" type="url" name="video" id="video" value={{listing.video}} required>
+      </div>
+
+      <div class="longQuestions">
+         <!--<input class="Response" id="description" type="text" name="description" placeholder="Project Description" required>-->
+         <p><span>Project Description</span> <span id="addImage">+Add an Image</span></p>
+         <textarea class="Response" id="description" name="description" required="required">{{listing.description}}</textarea>
+
+         <p>Skills I'm looking for</p>
+         <textarea class="Response" id="skillsNeeded" name="skills" required="required">{{listing.skillsNeeded}}</textarea>
+      </div>
+ 
+        <p>Image</p>
+        <img src ="{{listing.image.url}}">
+        <p>Change Your Image</p>
+        <input type="file" name="image" class="Response" />
+		<div class="submitButton">
+			<span><input type="submit" name="edit" value="Edit &rarr;" /></span>
+            <span><input type="submit" name="delete" value="Delete &rarr;" /></span>
+		</div>
+	</form>
+
+</body>
+</html>

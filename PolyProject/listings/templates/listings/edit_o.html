@@ -1,0 +1,32 @@
+<h1>Edit Listing</h1>
+
+<form action="{% url 'editPost' listing.id %}" method="post" enctype="multipart/form-data">
+{%csrf_token%}
+
+First Name
+<input type="text" name="firstname" value = {{listing.firstname}}/>
+
+Last Name
+<input type="text" name="lastname" value = {{listing.lastname}}/>
+
+Title
+<input type="text" name="title" value = {{listing.title}}/>
+
+Description 
+<input type="text" name="description" value = {{listing.description}}/>
+
+Skills Needed
+<input type="text" name="skills" value = {{listing.skillsNeeded}}/>
+
+Email
+<input type="email" name="email" value = {{listing.email}}/>
+
+Image
+<input type="file" name="image" value = {{listing.image}}/>
+
+Video
+<input type="url" name="video" value = {{listing.video}}/>
+
+<button type="submit" value="edit listing" name="edit">Edit</button>
+<button type="submit" value="delete listing" name="delete">Delete</button>
+</form>

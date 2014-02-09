@@ -1,0 +1,136 @@
+/* line 42, icons/*.png */
+.icons-sprite {
+  background: url('/images/icons-sb852325fe3.png') no-repeat;
+}
+
+/* line 10, ../sass/main.scss */
+body {
+  font-family: 'Raleway', helvetica, arial;
+  color: #333333;
+  background-color: #ffe;
+  height: 100%;
+  width: 600px;
+  padding: 10px;
+}
+
+/* line 20, ../sass/main.scss */
+.shortQuestions {
+  width: 175px;
+}
+
+/* line 25, ../sass/main.scss */
+.longQuestions {
+  width: 100%;
+}
+/* line 29, ../sass/main.scss */
+.longQuestions #description {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #f8d3a0;
+  border: none;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 7px;
+}
+/* line 41, ../sass/main.scss */
+.longQuestions #skillsNeeded {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #f8d3a0;
+  border: none;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+/* line 52, ../sass/main.scss */
+#survey p {
+  margin: 15px 0px 3px;
+  color: #666666;
+}
+
+/* line 59, ../sass/main.scss */
+input[type=text] {
+  padding: 0 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #f8d3a0;
+}
+
+/* line 67, ../sass/main.scss */
+textarea {
+  padding: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #f8d3a0;
+}
+
+/*input[type=text]::-webkit-input-placeholder, textarea::-webkit-input-placeholder 
+{
+   color: $lightGrey;
+   visibility: hidden;
+}    
+input[type=text]:-moz-placeholder, textarea::-webkit-input-placeholder 
+{ 
+   color: $lightGrey;
+   visibility: hidden; 
+}    
+input[type=text]::-moz-placeholder, textarea::-webkit-input-placeholder 
+{  
+   color: $lightGrey;
+   visibility: hidden;  
+}    
+input[type=text]:-ms-input-placeholder, textarea::-webkit-input-placeholder  
+{  
+   color: $lightGrey;
+   visibility: hidden;
+}*/
+/* line 96, ../sass/main.scss */
+input[type=text].Response, input[type=submit] {
+  border: none;
+  width: 100%;
+  height: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-align: left;
+}
+
+/* line 105, ../sass/main.scss */
+input[type=submit] {
+  border: solid #333333 2px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #333333;
+  width: 175px;
+}
+
+/* line 113, ../sass/main.scss */
+#addImage {
+  padding: 0px 5px;
+  margin: 20px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  background-color: #f8d3a0;
+}
+
+/* line 120, ../sass/main.scss */
+#addImage:hover {
+  cursor: pointer;
+}

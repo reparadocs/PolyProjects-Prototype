@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title> Poly Projects | Submit </title>
+
+   <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" type="text/css" href="{% static "detail/stylesheets/project.css"%}"/>
+</head>
+
+<body>
+   <div id="title">
+      <h1>{{listing.title}}</h1>
+   </div>
+
+    {%if listing.video != "" %}
+   <div id="video">
+    {{listing.video|safe}}
+   </div>
+    {%endif%}
+
+   <p class="category">Project Description</p>
+   <div id="description" class="content">
+    {{listing.description}}
+   </div>
+
+   <br />
+   <p class="category">Skills Needed</p>
+   <div id="skills" class="content">
+    {{listing.skillsNeeded}}
+   </div>
+
+   <p class="category">Contact</p>
+   <div id="contact" class="content">
+    {{ listing.firstname}}  {{listing.lastname}} <br/>
+    {{listing.email}}
+   </div>
+</body>
+</html>
